@@ -1,26 +1,357 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-white text-slate-900;
+    overflow-x: hidden;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  a:hover {
+    @apply text-slate-700;
+  }
+
+  img {
+    @apply block h-auto max-w-full;
+  }
+
+  main {
+    min-height: 70vh;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white;
+  }
+
+  .container {
+    @apply mx-auto w-full max-w-none px-8;
+  }
+
+  .site-header {
+    @apply sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur;
+  }
+
+  .header-inner {
+    @apply flex flex-wrap items-center justify-between gap-4 py-3;
+  }
+
+  .brand {
+    @apply flex flex-col font-serif;
+  }
+
+  .brand-title {
+    @apply text-lg font-bold tracking-tight;
+  }
+
+  .brand-sub {
+    @apply text-xs text-slate-500;
+  }
+
+  .nav {
+    @apply flex flex-wrap gap-4 font-semibold text-slate-900;
+  }
+
+  .menu-toggle {
+    @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-semibold md:hidden;
+  }
+
+  .header-cta {
+    @apply inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800;
+  }
+
+  .hero {
+    @apply py-8;
+  }
+
+  .hero-grid {
+    @apply grid gap-8 md:grid-cols-2 md:items-center;
+  }
+
+  .hero-title {
+    @apply font-serif text-3xl font-bold tracking-tight md:text-4xl;
+  }
+
+  .hero-subtitle {
+    @apply text-base leading-relaxed text-slate-600 md:text-lg;
+  }
+
+  .hero-actions {
+    @apply flex flex-wrap gap-4;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold;
+  }
+
+  .cta-primary {
+    @apply bg-slate-900 text-white hover:bg-slate-800;
+  }
+
+  .cta-secondary {
+    @apply border border-slate-200 bg-white text-slate-900 hover:text-slate-700;
+  }
+
+  .hero-card {
+    @apply rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
+  }
+
+  .section {
+    @apply py-8;
+  }
+
+  .section.alt {
+    @apply border-y border-slate-200 bg-slate-50;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl font-bold;
+  }
+
+  .prose {
+    @apply text-slate-600 leading-relaxed;
+  }
+
+  .prose h2,
+  .prose h3 {
+    @apply text-slate-900;
+  }
+
+  .cards {
+    @apply grid gap-4 md:grid-cols-2;
+  }
+
+  .cards.three {
+    @apply lg:grid-cols-3;
+  }
+
+  .cards.cards-four {
+    @apply md:grid-cols-4;
+  }
+
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
+  }
+
+  .badge-row {
+    @apply mt-3 flex flex-wrap gap-2;
+  }
+
+  .badge {
+    @apply rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700;
+  }
+
+  .callout {
+    @apply mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4;
+  }
+
+  .link-list,
+  .footer-list {
+    @apply m-0 grid list-none gap-2 p-0;
+  }
+
+  .faq-item {
+    @apply rounded-xl border border-slate-200 bg-white p-4;
+  }
+
+  .related-services {
+    @apply rounded-xl border border-dashed border-slate-200 bg-white p-4;
+  }
+
+  .site-footer {
+    @apply mt-10 bg-slate-900 text-slate-100;
+  }
+
+  .footer-grid {
+    @apply grid gap-8 py-10 md:grid-cols-3;
+  }
+
+  .footer-title {
+    @apply font-semibold;
+  }
+
+  .footer-text {
+    @apply mt-1;
+  }
+
+  .footer-list a {
+    @apply text-slate-100 hover:text-white;
+  }
+
+  .footer-bottom {
+    @apply border-t border-slate-700 py-3 text-center text-xs text-slate-300;
+  }
+
+  .map-embed {
+    @apply w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg;
+  }
+
+  .map-embed iframe {
+    @apply block h-80 w-full border-0;
+  }
+
+  .reviews {
+    @apply grid gap-4;
+  }
+
+  .review-card {
+    @apply rounded-xl border border-slate-200 bg-white p-4;
+  }
+
+  .review-meta {
+    @apply font-semibold text-slate-900;
+  }
+
+  .action-grid {
+    @apply mt-4 grid gap-4 md:grid-cols-4;
+  }
+
+  .action-card {
+    @apply grid gap-1 rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
+  }
+
+  .action-title {
+    @apply font-semibold text-slate-900;
+  }
+
+  .action-sub {
+    @apply text-sm text-slate-600;
+  }
+
+  .social-grid {
+    @apply mt-4 flex flex-wrap gap-2;
+  }
+
+  .social-pill {
+    @apply rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-semibold;
+  }
+}
+
+@layer utilities {
+  .container {
+    max-width: 100% !important;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-inner {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: marquee 120s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 2.5rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 859px) {
+    .nav {
+      @apply order-4 w-full flex-col items-start gap-2 overflow-hidden transition-[max-height];
+      max-height: 0;
+    }
+
+    .nav.nav-open {
+      max-height: 240px;
+    }
+
+    .header-cta {
+      @apply w-full;
+    }
+  }
+}
+/* Wrapper */
+.practice-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #111827; /* dark law-firm tone */
+  position: relative;
+}
+
+/* Track container */
+.practice-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+/* Pause on hover (optional but recommended) */
+.practice-marquee:hover .practice-marquee__track {
+  animation-play-state: paused;
+}
+
+/* Item */
+.practice-marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Separator dot */
+.practice-marquee__dot {
+  color: #22c55e; /* subtle green accent */
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Hide horizontal scrollbar but keep scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.7s ease-out;
 }
