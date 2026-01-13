@@ -3,7 +3,13 @@ import Image from "next/image";
 import Seo from "@/components/Seo";
 import { IoCallOutline } from "react-icons/io5";
 import { BUSINESS, COURTS, SERVICES, SOCIALS } from "@/lib/site-data";
-import { getBreadcrumbSchema, getLegalServiceSchema } from "@/lib/schema";
+import {
+  getBreadcrumbSchema,
+  getLegalServiceSchema,
+  getLocalBusinessSchema,
+  getOrganizationSchema,
+  getWebsiteSchema,
+} from "@/lib/schema";
 import PracticeMarquee from "@/components/PracticeMarquee";
 import HeroStats from "@/components/HeroStats";
 import BentoGridLeadership from "@/components/bento-grid-leadership";
@@ -12,15 +18,18 @@ import ClientsReviewSection from "@/components/ClientsReviewSection";
 import Heromain from "@/components/Heromain";
 
 export default function HomePage() {
-  const title = "Advocate in Kadapa | Rajesh Kumar Reddy Advocate Office";
+  const title = "Rajesh Kumar Reddy Advocate Office | Advocate in Kadapa";
   const description =
-    "Senior advocate in Kadapa with 36+ years of courtroom experience. Civil, criminal, family, property, revenue, bail, appeals, and litigation matters near Kadapa District Court.";
+    "Senior advocate Rajesh Kumar Reddy in Kadapa, beside Kadapa District Court. Civil, criminal, property and cheque bounce matters across YSR Kadapa District.";
   const path = "/";
   const keywords =
     "advocate in Kadapa, criminal lawyer Kadapa, civil lawyer Kadapa, property dispute lawyer Kadapa, cheque bounce lawyer Kadapa, bail lawyer Kadapa, Kadapa District Court";
 
   const schema = [
+    getOrganizationSchema(),
+    getLocalBusinessSchema(),
     getLegalServiceSchema(),
+    getWebsiteSchema(),
     getBreadcrumbSchema([{ name: "Home", href: "/" }]),
   ];
 
@@ -112,6 +121,24 @@ export default function HomePage() {
 
               <Link className="cta-secondary px-6 py-3" href="/services">
                 View Services
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
+              <Link className="hover:text-slate-900 underline" href="/about">
+                About Rajesh Kumar Reddy
+              </Link>
+              <Link className="hover:text-slate-900 underline" href="/services">
+                Legal Services
+              </Link>
+              <Link
+                className="hover:text-slate-900 underline"
+                href="/services/best-lawyer-in-kadapa"
+              >
+                Best Lawyer in Kadapa
+              </Link>
+              <Link className="hover:text-slate-900 underline" href="/contact">
+                Contact Office
               </Link>
             </div>
 
