@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://rajeshkumarrreddy.in
+Host: https://rajeshkumarreddyadvocatekadapa.com
 
 # Sitemaps
-Sitemap: https://rajeshkumarrreddy.in/sitemap.xml
+Sitemap: https://rajeshkumarreddyadvocatekadapa.com/sitemap.xml

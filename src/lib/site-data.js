@@ -1,4 +1,4 @@
-export const SITE_URL = "https://rajeshkumarrreddy.in";
+export const SITE_URL = "https://rajeshkumarreddyadvocatekadapa.com";
 
 export const BUSINESS = {
   name: "Rajesh Kumar Reddy Advocate Office",
