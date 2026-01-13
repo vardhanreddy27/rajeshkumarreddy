@@ -1,9 +1,32 @@
-# *
+# Global rules
 User-agent: *
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 # Host
 Host: https://rajeshkumarreddyadvocatekadapa.com
 
-# Sitemaps
+# Sitemap
 Sitemap: https://rajeshkumarreddyadvocatekadapa.com/sitemap.xml
