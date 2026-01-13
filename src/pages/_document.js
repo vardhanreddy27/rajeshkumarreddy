@@ -10,6 +10,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
         />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="format-detection" content="telephone=no" />
       </Head>
       <body>
