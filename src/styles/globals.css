@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =========================
+   BASE
+========================= */
 @layer base {
   * {
     box-sizing: border-box;
@@ -7,14 +10,15 @@
 
   html,
   body {
+    width: 100%;
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    overflow-x: hidden; /* CRITICAL FIX */
   }
 
   body {
     @apply bg-white text-slate-900;
-    overflow-x: hidden;
   }
 
   a {
@@ -34,13 +38,43 @@
   }
 }
 
+/* =========================
+   COMPONENTS
+========================= */
 @layer components {
-  .skip-link {
-    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white;
+  /* 🔥 FIXED CONTAINER (MOBILE SAFE) */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;   /* 16px mobile */
+    padding-right: 1rem;
   }
 
-  .container {
-    @apply mx-auto w-full max-w-none px-8;
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1200px;
+    }
   }
 
   .site-header {
@@ -75,12 +109,13 @@
     @apply inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800;
   }
 
+  /* HERO */
   .hero {
     @apply py-8;
   }
 
   .hero-grid {
-    @apply grid gap-8 md:grid-cols-2 md:items-center;
+    @apply grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center;
   }
 
   .hero-title {
@@ -92,7 +127,7 @@
   }
 
   .hero-actions {
-    @apply flex flex-wrap gap-4;
+    @apply grid gap-3 sm:flex sm:flex-wrap;
   }
 
   .cta-primary,
@@ -106,10 +141,6 @@
 
   .cta-secondary {
     @apply border border-slate-200 bg-white text-slate-900 hover:text-slate-700;
-  }
-
-  .hero-card {
-    @apply rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
   }
 
   .section {
@@ -128,27 +159,6 @@
     @apply text-slate-600 leading-relaxed;
   }
 
-  .prose h2,
-  .prose h3 {
-    @apply text-slate-900;
-  }
-
-  .cards {
-    @apply grid gap-4 md:grid-cols-2;
-  }
-
-  .cards.three {
-    @apply lg:grid-cols-3;
-  }
-
-  .cards.cards-four {
-    @apply md:grid-cols-4;
-  }
-
-  .card {
-    @apply rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
-  }
-
   .badge-row {
     @apply mt-3 flex flex-wrap gap-2;
   }
@@ -157,81 +167,29 @@
     @apply rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700;
   }
 
+  /* 🔥 CARDS FIX (NO MOBILE BREAKAGE) */
+  .cards {
+    @apply grid grid-cols-1 gap-4 sm:grid-cols-2;
+  }
+
+  .cards.cards-four {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
+  }
+
   .callout {
     @apply mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4;
   }
 
-  .link-list,
-  .footer-list {
-    @apply m-0 grid list-none gap-2 p-0;
-  }
-
-  .faq-item {
-    @apply rounded-xl border border-slate-200 bg-white p-4;
-  }
-
-  .related-services {
-    @apply rounded-xl border border-dashed border-slate-200 bg-white p-4;
-  }
-
-  .site-footer {
-    @apply mt-10 bg-slate-900 text-slate-100;
-  }
-
-  .footer-grid {
-    @apply grid gap-8 py-10 md:grid-cols-3;
-  }
-
-  .footer-title {
-    @apply font-semibold;
-  }
-
-  .footer-text {
-    @apply mt-1;
-  }
-
-  .footer-list a {
-    @apply text-slate-100 hover:text-white;
-  }
-
-  .footer-bottom {
-    @apply border-t border-slate-700 py-3 text-center text-xs text-slate-300;
-  }
-
-  .map-embed {
-    @apply w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg;
-  }
-
-  .map-embed iframe {
-    @apply block h-80 w-full border-0;
-  }
-
-  .reviews {
-    @apply grid gap-4;
-  }
-
-  .review-card {
-    @apply rounded-xl border border-slate-200 bg-white p-4;
-  }
-
-  .review-meta {
-    @apply font-semibold text-slate-900;
-  }
-
   .action-grid {
-    @apply mt-4 grid gap-4 md:grid-cols-4;
+    @apply mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4;
   }
 
   .action-card {
     @apply grid gap-1 rounded-xl border border-slate-200 bg-white p-4 shadow-lg;
-  }
-
-  .action-title {
-    @apply font-semibold text-slate-900;
-  }
-
-  .action-sub {
-    @apply text-sm text-slate-600;
   }
 
   .social-grid {
@@ -243,9 +201,17 @@
   }
 }
 
+/* =========================
+   UTILITIES
+========================= */
 @layer utilities {
-  .container {
-    max-width: 100% !important;
+  /* HIDE SCROLLBAR BUT KEEP SCROLL */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
   @keyframes marquee {
@@ -285,73 +251,4 @@
       @apply w-full;
     }
   }
-}
-/* Wrapper */
-.practice-marquee {
-  width: 100%;
-  overflow: hidden;
-  background: #111827; /* dark law-firm tone */
-  position: relative;
-}
-
-/* Track container */
-.practice-marquee__track {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 25s linear infinite;
-}
-
-/* Pause on hover (optional but recommended) */
-.practice-marquee:hover .practice-marquee__track {
-  animation-play-state: paused;
-}
-
-/* Item */
-.practice-marquee__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-/* Separator dot */
-.practice-marquee__dot {
-  color: #22c55e; /* subtle green accent */
-  font-size: 0.9rem;
-}
-
-/* Animation */
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-/* Hide horizontal scrollbar but keep scroll */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-slide {
-  animation: fadeSlide 0.7s ease-out;
 }

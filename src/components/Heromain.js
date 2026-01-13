@@ -3,8 +3,8 @@ import { BUSINESS } from "@/lib/site-data";
 
 export default function Heromain() {
   return (
-    <section className="relative bg-white pt-12 md:pt-16 pb-0 overflow-hidden">
-      <div className="container hero-grid gap-10 md:gap-14 items-center md:items-end">
+    <section className="relative bg-white pt-10 md:pt-16 pb-0 overflow-hidden">
+      <div className="container hero-grid gap-8 md:gap-14 items-center md:items-end">
         {/* LEFT CONTENT */}
         <div className="space-y-6">
           <span className="text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold">
@@ -75,7 +75,7 @@ export default function Heromain() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative max-w-2xl mx-auto">
+        <div className="relative max-w-2xl mx-auto w-full mt-6 md:mt-0">
           <div className="pointer-events-none absolute top-4 -left-32 hidden md:block opacity-90">
             <Image
               src="/images/kulla.jpeg"
@@ -102,8 +102,8 @@ export default function Heromain() {
               alt="Rajesh Kumar Reddy Advocate Office Kadapa"
               width={520}
               height={640}
-              className="h-[440px] md:h-[520px] w-80 md:w-[360px] object-contain"
-              sizes="(max-width: 560px) 80vw, 520px"
+              className="h-72 sm:h-80 md:h-[520px] w-64 sm:w-72 md:w-[360px] object-contain"
+              sizes="(max-width: 560px) 70vw, 360px"
               priority
             />
           </div>

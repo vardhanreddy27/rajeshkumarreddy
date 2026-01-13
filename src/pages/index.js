@@ -131,7 +131,8 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="section alt pb-12">
+<section className="section alt pb-12 overflow-hidden">
+  {/* TEXT CONTENT – NORMAL CONTAINER */}
   <div className="container">
     <h2 className="section-title">
       Legal Support & Practice Areas – Rajesh Kumar Reddy Advocate Office
@@ -144,69 +145,81 @@ export default function HomePage() {
       preparation, and clear legal guidance before the Kadapa District Court
       and the High Court of Andhra Pradesh.
     </p>
+  </div>
 
-          <div className="mt-8">
-            {/* HORIZONTAL SCROLL – SCROLLBAR HIDDEN */}
-            <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide overscroll-x-contain">
-        {SERVICES.map((service) => (
-          <article
-            key={service.slug}
-            className="snap-start min-w-[280px] sm:min-w-[360px] md:min-w-[440px] rounded-3xl border border-slate-200 bg-white transition overflow-hidden"
-          >
-            <div className="h-56 md:h-64 w-full overflow-hidden bg-slate-100">
-              <Image
-                src={service.image || "/images/hero-kadapa.svg"}
-                alt={`${service.title} in Kadapa`}
-                width={1200}
-                height={720}
-                className="h-full w-full object-cover"
-                sizes="(max-width: 768px) 90vw, 420px"
-                unoptimized
-              />
-            </div>
-
-            <div className="p-8">
-              <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Advocate Rajesh Kumar Reddy · Kadapa
-              </div>
-
-              <h3 className="mt-3 text-xl font-semibold text-slate-900">
-                {service.title}
-              </h3>
-
-              <p
-                className="mt-3 text-sm leading-relaxed text-slate-600"
-                style={{
-                  display: "-webkit-box",
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                }}
-              >
-                {service.description}
-              </p>
-
-              <Link
-                className="mt-5 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900"
-                href={service.href}
-              >
-                Read More
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-
-            {/* SEO CONTEXT (INVISIBLE BUT INDEXABLE) */}
-            <p className="sr-only">
-              Legal service provided by Rajesh Kumar Reddy, senior advocate
-              practicing in Kadapa District Court and High Court of Andhra
-              Pradesh.
-            </p>
-          </article>
-        ))}
-            </div>
+  {/* 🔥 FULL-BLEED HORIZONTAL SCROLL (NO CONTAINER) */}
+  <div className="mt-8">
+    <div
+      className="
+        flex gap-4 overflow-x-auto pb-6
+        snap-x snap-mandatory
+        scrollbar-hide
+        px-4
+      "
+    >
+      {SERVICES.map((service) => (
+        <article
+          key={service.slug}
+          className="
+            snap-start
+            min-w-[85vw]
+            sm:min-w-[320px]
+            md:min-w-[380px]
+            lg:min-w-[420px]
+            rounded-3xl
+            border border-slate-200
+            bg-white
+            overflow-hidden
+            transition
+          "
+        >
+          {/* IMAGE */}
+          <div className="h-52 sm:h-56 md:h-64 w-full overflow-hidden bg-slate-100">
+            <Image
+              src={service.image || "/images/hero-kadapa.svg"}
+              alt={`${service.title} in Kadapa`}
+              width={1200}
+              height={720}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 85vw, 420px"
+            />
           </div>
+
+          {/* CONTENT */}
+          <div className="p-5 sm:p-6">
+            <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Advocate Rajesh Kumar Reddy · Kadapa
+            </div>
+
+            <h3 className="mt-3 text-lg sm:text-xl font-semibold text-slate-900">
+              {service.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 line-clamp-3">
+              {service.description}
+            </p>
+
+            <Link
+              href={service.href}
+              className="
+                mt-5 inline-flex items-center gap-2
+                rounded-full
+                border border-slate-200
+                px-4 py-2
+                text-sm font-semibold
+                text-slate-900
+              "
+            >
+              Read More <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
+
+
 
 
       {/* LEADERSHIP */}

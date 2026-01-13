@@ -72,7 +72,7 @@ export default function Layout({ children }) {
 
       <div className="min-h-screen flex flex-col bg-white">
         {/* HEADER */}
-        <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
+        <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
           {/* ✅ DESKTOP CONTAINER: SAME AS YOUR CODE */}
           <div className="container">
             <div className="flex items-center justify-between h-16">
@@ -87,21 +87,23 @@ export default function Layout({ children }) {
               </Link>
 
               {/* DESKTOP NAV (UNCHANGED) */}
-              <nav className="hidden md:flex items-center gap-14 text-sm font-medium text-gray-800">
+              <nav className="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-700">
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
 
                 {Object.entries(SERVICES).map(([service, items]) => (
                   <div key={service} className="relative group ">
-                    <span className="cursor-pointer">{service}</span>
+                    <span className="cursor-pointer text-slate-700 hover:text-slate-900">
+                      {service}
+                    </span>
 
-                    <div className="absolute left-0 top-full mt-0 hidden group-hover:block bg-white border border-gray-200 shadow-lg min-w-[260px]">
+                    <div className="absolute left-0 top-full mt-3 hidden group-hover:block rounded-xl bg-white border border-slate-200 shadow-xl min-w-[260px]">
                       <ul className="py-2">
                         {items.map((item) => (
                           <li key={item.href}>
                             <Link
                               href={item.href}
-                              className="block px-4 py-2 hover:bg-gray-100"
+                              className="block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                             >
                               {item.label}
                             </Link>
@@ -138,7 +140,7 @@ export default function Layout({ children }) {
               {/* MOBILE MENU BUTTON */}
               <button
                 onClick={() => setMenuOpen(true)}
-                className="md:hidden text-sm font-medium"
+                className="md:hidden rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-700"
               >
                 Menu
               </button>
@@ -148,20 +150,20 @@ export default function Layout({ children }) {
 
         {/* ✅ MOBILE OVERLAY MENU (ONLY THIS IS NEW) */}
         {menuOpen && (
-          <div className="fixed inset-0 z-[999] bg-[#e9e2da] md:hidden">
+          <div className="fixed inset-0 z-[999] bg-white md:hidden">
             {/* Top Bar */}
             <div className="flex items-center justify-between px-6 py-5">
-              <span className="text-lg font-medium text-[#c4552d]">Menu</span>
+              <span className="text-lg font-semibold text-slate-900">Menu</span>
               <button
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
               >
-                <IoCloseOutline className="text-3xl text-gray-700" />
+                <IoCloseOutline className="text-3xl text-slate-700" />
               </button>
             </div>
 
             {/* Menu Items */}
-            <nav className="px-6 mt-10 space-y-8">
+            <nav className="px-6 mt-8 space-y-8">
               <MobileNavItem
                 icon={<HiOutlineHome className="text-2xl" />}
                 label="Home"
@@ -177,13 +179,13 @@ export default function Layout({ children }) {
 
               {/* Services section (kept relevant) */}
               <div>
-                <div className="flex items-center gap-3 text-2xl font-medium text-gray-900 mb-4">
+                <div className="flex items-center gap-3 text-2xl font-semibold text-slate-900 mb-4">
                   <HiOutlineScale className="text-2xl" />
                   Services
                 </div>
 
                 {/* Main services only (simple + senior-friendly) */}
-                <div className="ml-6 space-y-3 text-lg text-gray-900">
+                <div className="ml-6 space-y-3 text-lg text-slate-800">
                   {Object.keys(SERVICES).map((service) => (
                     <Link
                       key={service}
@@ -215,13 +217,13 @@ export default function Layout({ children }) {
             <div className="absolute bottom-6 left-6 right-6 flex gap-3">
               <a
                 href={`tel:${BUSINESS.phoneTel}`}
-                className="flex-1 text-center py-3 rounded-lg bg-gray-900 text-white text-lg"
+                className="flex-1 text-center py-3 rounded-lg bg-slate-900 text-white text-lg"
               >
                 Call
               </a>
               <a
                 href={`https://wa.me/${BUSINESS.phoneTel.replace("+", "")}`}
-                className="flex-1 text-center py-3 rounded-lg bg-green-600 text-white text-lg"
+                className="flex-1 text-center py-3 rounded-lg bg-emerald-600 text-white text-lg"
                 target="_blank"
                 rel="noreferrer"
               >
