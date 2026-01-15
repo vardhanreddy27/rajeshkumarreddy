@@ -37,7 +37,7 @@ export default function HomePage() {
     "Kadapa District Court":
       "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
     "Kadapa (District Headquarters) Court":
-      "http://gazeis.in/wp-content/uploads/LawStates/SouthStates/Andhra-Pradesh-Kadapa-District-and-Session-Courts.jpg",
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
     "Railway Kodur Junior Civil Judge Court":
       "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080599.jpg",
     "Jammalamadugu Junior Civil Judge Court":
