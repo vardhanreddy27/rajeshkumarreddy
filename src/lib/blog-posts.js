@@ -78,6 +78,181 @@ const createPost = ({
 
 export const BLOG_POSTS = [
   createPost({
+    slug: "best-advocate-kadapa-hiring-checklist",
+    title: "Best Advocate in Kadapa: Simple Checklist",
+    description:
+      "Simple Kadapa guide to choose an advocate with Kadapa District Court experience and clear guidance.",
+    excerpt:
+      "Use this Kadapa checklist to choose the right advocate with clear guidance and court experience.",
+    keywords:
+      "best advocate in Kadapa, top advocate in Kadapa, advocate in Kadapa, Kadapa District Court lawyer",
+    date: "2025-01-25",
+    intro: [
+      "In Kadapa, people want clear advice, strong court work, and honest timelines. The right advocate explains the next steps in simple words and prepares papers carefully for Kadapa District Court.",
+      "Rajesh Kumar Reddy Advocate Office supports clients across YSR Kadapa District with clear consultation, document checklists, and step-by-step planning for civil, criminal, and property matters.",
+    ],
+    keyPoints: [
+      "Ask about work in Kadapa District Court",
+      "Check experience in your case type",
+      "Ask for a simple document list",
+      "Confirm how updates will be shared",
+      "Office near Kadapa District Court helps",
+    ],
+    steps: [
+      "Pick a few advocates with similar cases",
+      "Share your timeline and key papers",
+      "Ask how the case will move in Kadapa court",
+      "Confirm documents needed and next dates",
+      "Fix the plan and start the work",
+    ],
+    documents: [
+      "Notices, agreements, or FIR copies",
+      "Identity and address proof",
+      "Previous court orders or case papers",
+      "Property or financial records if relevant",
+    ],
+  }),
+  createPost({
+    slug: "top-lawyer-kadapa-civil-matters",
+    title: "Top Lawyer in Kadapa for Civil Matters: Simple Guide",
+    description:
+      "Simple Kadapa guide to choose a civil lawyer with strong drafting, evidence planning, and local court knowledge.",
+    excerpt:
+      "An easy Kadapa guide to check civil case experience and document planning before filing.",
+    keywords:
+      "best civil lawyer in Kadapa, civil lawyer Kadapa, top lawyer Kadapa, Kadapa District Court civil",
+    date: "2025-01-24",
+    intro: [
+      "Civil cases in Kadapa need clean papers, strong evidence, and correct court process in Kadapa District Court.",
+      "A good civil lawyer should explain timelines, interim relief, and required documents in simple words before filing.",
+    ],
+    keyPoints: [
+      "Check how the case is drafted and relief is asked",
+      "Ask about interim injunction or stay options",
+      "Confirm Kadapa court filing practice",
+      "See experience in execution and appeals",
+      "Plan evidence and witnesses early",
+    ],
+    steps: [
+      "Keep all documents in order",
+      "Write a short case timeline",
+      "Ask what relief can be asked now",
+      "File with complete papers in Kadapa court",
+      "Track dates and follow-ups",
+    ],
+    documents: [
+      "Agreements, notices, and correspondence",
+      "Property or financial records as applicable",
+      "Identity proof and address proof",
+      "Prior orders or case history",
+    ],
+  }),
+  createPost({
+    slug: "criminal-lawyer-kadapa-fir-response",
+    title: "Criminal Lawyer in Kadapa: FIR Response and First Steps",
+    description:
+      "Kadapa criminal defense checklist for FIR response, bail planning, and documents for Kadapa District Court.",
+    excerpt:
+      "First steps after an FIR in Kadapa with a clear document list and bail plan.",
+    keywords:
+      "criminal lawyer Kadapa, best criminal lawyer Kadapa, FIR response Kadapa, bail lawyer Kadapa",
+    date: "2025-01-23",
+    intro: [
+      "Criminal matters in Kadapa move fast. Quick action and correct papers protect rights and improve outcomes.",
+      "Rajesh Kumar Reddy Advocate Office provides a step-by-step plan for Kadapa District Court with clear timelines and evidence review.",
+    ],
+    keyPoints: [
+      "Act fast after FIR or notice",
+      "Plan bail or anticipatory bail early",
+      "Keep a clear timeline of events",
+      "Collect evidence and witness details",
+      "Follow Kadapa court dates",
+    ],
+    steps: [
+      "Collect FIR, remand papers, or notices",
+      "Write a clear timeline of events",
+      "Prepare bail grounds and documents",
+      "File and attend hearings in Kadapa",
+      "Follow court conditions and next dates",
+    ],
+    documents: [
+      "FIR copy and remand report",
+      "Identity and address proof",
+      "Medical records if relevant",
+      "Previous orders or case history",
+    ],
+  }),
+  createPost({
+    slug: "property-dispute-lawyer-kadapa-possession",
+    title: "Property Dispute Lawyer in Kadapa: First Steps to Protect Possession",
+    description:
+      "Kadapa property dispute guide with possession proof, injunction planning, and document readiness.",
+    excerpt:
+      "Simple Kadapa steps to protect land and possession with correct documents and injunction plan.",
+    keywords:
+      "property dispute lawyer Kadapa, land dispute Kadapa, injunction Kadapa, property lawyer Kadapa",
+    date: "2025-01-22",
+    intro: [
+      "Property disputes in Kadapa often need quick action to protect possession and boundaries.",
+      "Early documents and a clear injunction plan help before Kadapa District Court.",
+    ],
+    keyPoints: [
+      "Collect possession and boundary proof",
+      "Check title and revenue records",
+      "Plan temporary injunction request",
+      "Record threats or interference",
+      "Keep survey sketches ready",
+    ],
+    steps: [
+      "Gather title, EC, and revenue records",
+      "Prepare possession and boundary proof",
+      "Issue notice where required",
+      "File for injunction in Kadapa court",
+      "Follow interim orders and dates",
+    ],
+    documents: [
+      "Sale deeds and encumbrance certificate",
+      "Pahani, adangal, and tax receipts",
+      "Survey sketch and location plan",
+      "Photographs and possession proof",
+    ],
+  }),
+  createPost({
+    slug: "kadapa-district-court-filing-tips",
+    title: "Kadapa District Court Filing Tips: Simple Steps for Documents",
+    description:
+      "Simple Kadapa filing tips to avoid delays with complete documents and correct format.",
+    excerpt:
+      "Kadapa filing tips with a clear document list, format checks, and listing basics.",
+    keywords:
+      "Kadapa District Court filing, advocate in Kadapa, Kadapa court procedure, Kadapa lawyer tips",
+    date: "2025-01-21",
+    intro: [
+      "Court filings in Kadapa move faster when documents are complete and format is correct.",
+      "A local advocate can guide registry format and listing steps in simple words.",
+    ],
+    keyPoints: [
+      "Use clean pleadings and clear relief",
+      "Attach all documents and attachments",
+      "Keep index and page numbers",
+      "Reply to registry objections quickly",
+      "Keep copies ready for urgent hearings",
+    ],
+    steps: [
+      "Prepare a document checklist and index",
+      "Verify affidavits and Vakalat",
+      "File in Kadapa District Court registry",
+      "Respond quickly to registry objections",
+      "Track listing dates and updates",
+    ],
+    documents: [
+      "Complete pleading set with index",
+      "Affidavits, Vakalatnama, and notices",
+      "Proof of service and acknowledgements",
+      "Copies of all annexures",
+    ],
+  }),
+  createPost({
     slug: "how-to-choose-lawyer-kadapa",
     title: "How to Choose the Right Lawyer in Kadapa",
     description:
