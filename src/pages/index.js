@@ -1,0 +1,388 @@
+import Link from "next/link";
+import Image from "next/image";
+import Seo from "@/components/Seo";
+import { IoCallOutline } from "react-icons/io5";
+import { BUSINESS, COURTS, SERVICES, SOCIALS } from "@/lib/site-data";
+import {
+  getBreadcrumbSchema,
+  getLegalServiceSchema,
+  getLocalBusinessSchema,
+  getOrganizationSchema,
+  getWebsiteSchema,
+} from "@/lib/schema";
+import PracticeMarquee from "@/components/PracticeMarquee";
+import HeroStats from "@/components/HeroStats";
+import BentoGridLeadership from "@/components/bento-grid-leadership";
+import FaqSection from "@/components/FaqSection";
+import ClientsReviewSection from "@/components/ClientsReviewSection";
+import Heromain from "@/components/Heromain";
+
+export default function HomePage() {
+  const title = "Rajesh Kumar Reddy Advocate Office | Advocate in Kadapa";
+  const description =
+    "Senior advocate Rajesh Kumar Reddy in Kadapa, beside Kadapa District Court. Civil, criminal, property and cheque bounce matters across YSR Kadapa District.";
+  const path = "/";
+  const keywords =
+    "advocate in Kadapa, criminal lawyer Kadapa, civil lawyer Kadapa, property dispute lawyer Kadapa, cheque bounce lawyer Kadapa, bail lawyer Kadapa, Kadapa District Court";
+
+  const schema = [
+    getOrganizationSchema(),
+    getLocalBusinessSchema(),
+    getLegalServiceSchema(),
+    getWebsiteSchema(),
+    getBreadcrumbSchema([{ name: "Home", href: "/" }]),
+  ];
+
+  const courtImageOverrides = {
+    "Kadapa District Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
+    "Kadapa (District Headquarters) Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
+    "Railway Kodur Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080599.jpg",
+    "Jammalamadugu Junior Civil Judge Court":
+      "https://files.yappe.in/place/full/jammalamadugu-civil-court-8974915.webp",
+    "Mydukur Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080550.jpg",
+    "Sidhout Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080568.jpg",
+    "Nandalur Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080512.jpg",
+    "Rayachoty Court (Annamayya District HQ)":
+      "https://media.andhrajyothy.com/media/2023/20231205/9rct27_jpeg_c3a3defcbb.gif",
+
+    "Lakkireddipalli Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091384.jpg",
+
+   "Pulivendula Junior Civil Judge Court":
+      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091380.jpg",
+"Kamalapuram Junior Civil Judge Court":
+  "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kamalapuram_Railway_Station_Kadapa.jpg",
+"Proddatur Court":
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Prdt_railway_station_sign_board.jpg/1920px-Prdt_railway_station_sign_board.jpg",
+
+"Rajampet Court":
+  "https://imagesvs.oneindia.com/webp/te/img/2024/04/rajampet-1713871607.jpg",
+
+"Badvel Court":
+  "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091380.jpg",
+"High Court of Andhra Pradesh":
+  "https://www.livelaw.in/h-upload/2020/12/10/500x300_385718-andhra-pradesh-high-court.jpg",
+
+  "Family Court":"https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091389.jpg",
+};
+
+  return (
+    <>
+      <Seo
+        title={title}
+        description={description}
+        path={path}
+        schema={schema}
+        keywords={keywords}
+      />
+<Heromain />
+      {/* PRACTICE AREAS MARQUEE */}
+      <PracticeMarquee />
+
+      {/* HERO SECTION */}
+      <section className="hero py-16 md:py-24">
+        <div className="container hero-grid gap-12 md:gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <div className="space-y-6">
+            <h2 className="hero-title leading-tight">
+              Advocate in Kadapa
+            </h2>
+
+            <p className="hero-subtitle ">
+              Rajesh Kumar Reddy is a senior advocate with over{" "}
+              <strong>36 years of courtroom experience</strong>, enrolled as{" "}
+              {BUSINESS.enrollment}. Practicing extensively before the Kadapa
+              District Court, he handles a wide spectrum of matters including
+              civil litigation, criminal defence, family court disputes,
+              property and land issues, cheque bounce cases, revenue matters,
+              appeals, revisions, bail proceedings, and advisory work across
+              YSR Kadapa District.
+            </p>
+
+            {/* ACTIONS */}
+            <div className="hero-actions flex flex-wrap gap-4 pt-2">
+                <a
+                             href={`tel:${BUSINESS.phoneTel}`}
+                             className="px-4 py-1.5 cta-primary bg-gray-900 text-white text-sm flex items-center"
+                           >
+                             <IoCallOutline className="mx-1 text-lg" />
+                             {BUSINESS.phone}
+                           </a>
+
+              <Link className="cta-secondary px-6 py-3" href="/contact">
+                Visit Office
+              </Link>
+
+              <Link className="cta-secondary px-6 py-3" href="/services">
+                View Services
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
+              <Link className="hover:text-slate-900 underline" href="/about">
+                About Rajesh Kumar Reddy
+              </Link>
+              <Link className="hover:text-slate-900 underline" href="/services">
+                Legal Services
+              </Link>
+              <Link
+                className="hover:text-slate-900 underline"
+                href="/services/best-lawyer-in-kadapa"
+              >
+                Best Lawyer in Kadapa
+              </Link>
+              <Link className="hover:text-slate-900 underline" href="/contact">
+                Contact Office
+              </Link>
+            </div>
+
+            {/* BADGES */}
+            <div className="badge-row flex flex-wrap gap-3 pt-4">
+              <span className="badge">36+ Years Experience</span>
+              <span className="badge">Former Bar Association President</span>
+              <span className="badge">Kadapa District Court</span>
+            </div>
+          </div>
+
+          {/* RIGHT – STATS */}
+          <div className=" w-full max-w-xl mx-auto">
+            <HeroStats />
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+<section className="section alt pb-12 overflow-hidden">
+  {/* TEXT CONTENT – NORMAL CONTAINER */}
+  <div className="container">
+    <h2 className="section-title">
+      Legal Support & Practice Areas – Rajesh Kumar Reddy Advocate Office
+    </h2>
+
+    <p className="prose max-w-4xl">
+      Rajesh Kumar Reddy Advocate Office provides comprehensive legal support to
+      individuals, families, and businesses across YSR Kadapa District. Each
+      service is delivered with strong local court knowledge, disciplined case
+      preparation, and clear legal guidance before the Kadapa District Court
+      and the High Court of Andhra Pradesh.
+    </p>
+  </div>
+
+  {/* 🔥 FULL-BLEED HORIZONTAL SCROLL (NO CONTAINER) */}
+  <div className="mt-8">
+    <div
+      className="
+        flex gap-4 overflow-x-auto pb-6
+        snap-x snap-mandatory
+        scrollbar-hide
+        px-4
+      "
+    >
+      {SERVICES.map((service) => (
+        <article
+          key={service.slug}
+          className="
+            snap-start
+            min-w-[85vw]
+            sm:min-w-[320px]
+            md:min-w-[380px]
+            lg:min-w-[420px]
+            rounded-3xl
+            border border-slate-200
+            bg-white
+            overflow-hidden
+            transition
+          "
+        >
+          {/* IMAGE */}
+          <div className="h-52 sm:h-56 md:h-64 w-full overflow-hidden bg-slate-100">
+            <Image
+              src={service.image || "/images/hero-kadapa.svg"}
+              alt={`${service.title} in Kadapa`}
+              width={1200}
+              height={720}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 85vw, 420px"
+            />
+          </div>
+
+          {/* CONTENT */}
+          <div className="p-5 sm:p-6">
+            <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Advocate Rajesh Kumar Reddy · Kadapa
+            </div>
+
+            <h3 className="mt-3 text-lg sm:text-xl font-semibold text-slate-900">
+              {service.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 line-clamp-3">
+              {service.description}
+            </p>
+
+            <Link
+              href={service.href}
+              className="
+                mt-5 inline-flex items-center gap-2
+                rounded-full
+                border border-slate-200
+                px-4 py-2
+                text-sm font-semibold
+                text-slate-900
+              "
+            >
+              Read More <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+      {/* LEADERSHIP */}
+      <section className="section">
+        <div className="container space-y-8">
+          <div className="max-w-4xl">
+            <h2 className="section-title">Local Leadership and Trust</h2>
+            <p className="prose">
+              Rajesh Kumar Reddy served as former President of the Kadapa
+              District Bar Association and played a leadership role in the
+              Samaikyandhra movement. He was instrumental in establishing the
+              State Bank of India branch inside Kadapa District Court,
+              reflecting a long-standing commitment to the legal community.
+            </p>
+            <p className="prose">
+              Every matter receives careful attention, with clear options,
+              realistic timelines, and disciplined courtroom preparation.
+            </p>
+          </div>
+
+          <BentoGridLeadership />
+        </div>
+      </section>
+
+      {/* COURTS */}
+      <section className="section alt pb-12">
+        <div className="container">
+          <h2 className="section-title">Courts Practiced</h2>
+
+          <div className="cards cards-four">
+            {COURTS.map((court) => (
+              <div key={court} className="card">
+                <div className="mb-3 h-40 w-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+                  <Image
+                    src={courtImageOverrides[court] || "/images/court-placeholder.svg"}
+                    alt={`${court} in Kadapa`}
+                    width={1200}
+                    height={720}
+                    className="h-full w-full object-cover"
+                    sizes="(max-width: 768px) 90vw, 420px"
+                    unoptimized
+                  />
+                </div>
+                <h3>{court}</h3>
+                <p className="prose">
+                  Regular practice in {court} with Kadapa District Court
+                  coordination and strong local procedure awareness across YSR
+                  Kadapa District and Andhra Pradesh.
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="callout">
+            <p className="prose">
+              <strong>Need urgent legal guidance?</strong> Call{" "}
+              {BUSINESS.phone} or visit the office at {BUSINESS.address}.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* QUICK CONTACT */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title">Quick Contact</h2>
+
+          <p className="prose max-w-2xl">
+            Connect instantly for consultations near Kadapa District Court.
+            Call, WhatsApp, email, or visit the office beside Nagarjuna Model
+            School, Kadapa – 516001.
+          </p>
+
+          <div className="action-grid">
+            <a className="action-card" href={`tel:${BUSINESS.phoneTel}`}>
+              <span className="action-title">Call Office</span>
+              <span className="action-sub">{BUSINESS.phone}</span>
+            </a>
+
+            <a
+              className="action-card"
+              href={`https://wa.me/${BUSINESS.phoneTel.replace("+", "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="action-title">WhatsApp</span>
+              <span className="action-sub">Quick message support</span>
+            </a>
+
+            <a className="action-card" href={`mailto:${BUSINESS.email}`}>
+              <span className="action-title">Email</span>
+              <span className="action-sub">{BUSINESS.email}</span>
+            </a>
+
+            <Link className="action-card" href="/contact">
+              <span className="action-title">Visit Office</span>
+              <span className="action-sub">Kadapa 516001</span>
+            </Link>
+          </div>
+
+          <div className="social-grid">
+            {SOCIALS.map((social) => (
+              <a
+                key={social.name}
+                className="social-pill"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {social.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICE AREA */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title">Kadapa Service Area</h2>
+
+          <p className="prose max-w-3xl">
+            The office serves clients across YSR Kadapa District including
+            Kadapa, Badvel, Sidhout, and surrounding towns in Andhra Pradesh.
+            Chambers are located beside Kadapa District Court for quick access
+            to filings, hearings, and consultations.
+          </p>
+
+          <div className="badge-row">
+            <span className="badge">YSR Kadapa District</span>
+            <span className="badge">Kadapa 516001</span>
+            <span className="badge">Andhra Pradesh</span>
+          </div>
+        </div>
+      </section>
+      <FaqSection />
+<ClientsReviewSection />
+    </>
+  );
+}
