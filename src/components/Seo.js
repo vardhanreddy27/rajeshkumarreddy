@@ -40,12 +40,15 @@ export default function Seo({
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={metaImage} />
+        {/* provide alt text for social preview image */}
+        <meta property="og:image:alt" content={title} />
         <meta property="og:locale" content="en_IN" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImage} />
+        <meta name="twitter:image:alt" content={title} />
 
         <link rel="alternate" hrefLang="en-IN" href={canonical} />
         <meta name="geo.region" content="IN-AP" />

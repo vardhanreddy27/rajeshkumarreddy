@@ -90,9 +90,10 @@ export default function HomePage() {
         <div className="container hero-grid gap-12 md:gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="space-y-6">
-            <h2 className="hero-title leading-tight">
+            {/* primary heading should be H1 for SEO */}
+          <h1 className="hero-title leading-tight">
               Advocate in Kadapa
-            </h2>
+            </h1>
 
             <p className="hero-subtitle ">
               Rajesh Kumar Reddy is a senior advocate with over{" "}
