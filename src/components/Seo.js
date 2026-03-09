@@ -2,6 +2,8 @@ import Head from "next/head";
 import { JsonLdScript } from "next-seo";
 import { BUSINESS, GEO, SITE_URL } from "@/lib/site-data";
 
+const BASE_URL = "https://www.rajeshkumarreddyadvocatekadapa.com";
+
 export default function Seo({
   title,
   description,
@@ -11,16 +13,20 @@ export default function Seo({
   noindex,
   keywords,
 }) {
-  const canonical = `${SITE_URL}${path || ""}`;
-  const metaImage = image || `${SITE_URL}/images/hero-kadapa.svg`;
+  // Each page gets its own correct canonical URL
+  const canonical = `${BASE_URL}${path || ""}`;
+  const metaImage = image || `${BASE_URL}/images/hero-kadapa.svg`;
   const schemaItems = Array.isArray(schema) ? schema : schema ? [schema] : [];
   const defaultKeywords =
     "best lawyer in Kadapa, top lawyer in Kadapa, best advocate in Kadapa, top advocate in Kadapa, best civil lawyer in Kadapa, best criminal lawyer in Kadapa, advocate in Kadapa, Kadapa District Court, YSR Kadapa District, Andhra Pradesh";
-  const mergedKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
+  const mergedKeywords = keywords
+    ? `${keywords}, ${defaultKeywords}`
+    : defaultKeywords;
 
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={mergedKeywords} />
@@ -40,7 +46,6 @@ export default function Seo({
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={metaImage} />
-        {/* provide alt text for social preview image */}
         <meta property="og:image:alt" content={title} />
         <meta property="og:locale" content="en_IN" />
 
