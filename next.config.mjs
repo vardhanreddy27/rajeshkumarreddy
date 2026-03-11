@@ -52,6 +52,8 @@ const nextConfig = {
       { protocol: "https", hostname: "media.andhrajyothy.com" },
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
       { protocol: "https", hostname: "www.livelaw.in" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "imagesvs.oneindia.com" },
       { protocol: "https", hostname: "i.pinimg.com" },
     ],
   },

@@ -45,7 +45,7 @@ export default function AboutPage() {
     "Pulivendula Junior Civil Judge Court":
       "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091380.jpg",
     "Kamalapuram Junior Civil Judge Court":
-      "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kamalapuram_Railway_Station_Kadapa.jpg",
+      "https://imagesvs.oneindia.com/te/img/2024/02/kamalapuram-06-1709194412.jpg",
     "Proddatur Court":
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Prdt_railway_station_sign_board.jpg/1920px-Prdt_railway_station_sign_board.jpg",
     "Rajampet Court":
