@@ -8,6 +8,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: false,
+  experimental: {
+    optimizePackageImports: ["react-icons"],
+  },
   async redirects() {
     return [
       {
@@ -40,6 +43,8 @@ const nextConfig = {
     ];
   },
   images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       { protocol: "https", hostname: "cdnbbsr.s3waas.gov.in" },
       { protocol: "https", hostname: "gazeis.in" },

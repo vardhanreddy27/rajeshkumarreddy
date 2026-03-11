@@ -33,7 +33,8 @@ export default function ContactPage() {
   ];
 
   const whatsappLink = "https://wa.me/919346362201";
-  const googleBusinessLink = "https://share.google/ukNvjN8l4h7XSaDFQ";
+  const googleBusinessLink =
+    "https://www.google.com/maps/search/?api=1&query=Rajesh+Kumar+Reddy+Advocate+Office+Kadapa";
 
   return (
     <>

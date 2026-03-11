@@ -177,9 +177,7 @@ export default function BentoGridLeadership() {
                   <li>
                     <a
                       className="inline-flex items-center gap-2 text-sm underline"
-                      href="https://www.pathlegal.in/Advocate-rajesh-kumar-reddy-Kadapa/L000000000672611.htm"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                     >
                       <FaLink /> Path Legal Profile
                     </a>
@@ -187,7 +185,7 @@ export default function BentoGridLeadership() {
                   <li>
                     <a
                       className="inline-flex items-center gap-2 text-sm underline"
-                      href="https://share.google/uaRWLedBlh0r7VoFS"
+                      href="https://www.google.com/maps/search/?api=1&query=Rajesh+Kumar+Reddy+Advocate+Office+Kadapa"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -197,9 +195,7 @@ export default function BentoGridLeadership() {
                   <li>
                     <a
                       className="inline-flex items-center gap-2 text-sm underline"
-                      href="https://ecourtsindia.com/lawyer/p-rajesh-kumar-reddy?cc=APKD00"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                     >
                       <FaLink /> eCourts Advocate Listing
                     </a>
@@ -207,9 +203,7 @@ export default function BentoGridLeadership() {
                   <li>
                     <a
                       className="inline-flex items-center gap-2 text-sm underline"
-                      href="https://lawrato.com/advocate-rajesh-kumar-reddy"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                     >
                       <FaLink /> LawRato Profile
                     </a>
@@ -217,9 +211,7 @@ export default function BentoGridLeadership() {
                   <li>
                     <a
                       className="inline-flex items-center gap-2 text-sm underline"
-                      href="https://truelawyer.in/lawyer/rajesh-kumar-reddy-p"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                     >
                       <FaLink /> TrueLawyer Profile
                     </a>

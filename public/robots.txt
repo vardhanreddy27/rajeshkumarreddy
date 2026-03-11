@@ -2,11 +2,8 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: www.rajeshkumarreddyadvocatekadapa.com
-
 # Sitemaps
 Sitemap: https://www.rajeshkumarreddyadvocatekadapa.com/sitemap.xml
 
 # AI crawler guidance
-LLMS.txt: https://www.rajeshkumarreddyadvocatekadapa.com/llms.txt
+# llms.txt is available at: https://www.rajeshkumarreddyadvocatekadapa.com/llms.txt

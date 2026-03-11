@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Seo from "@/components/Seo";
 import { IoCallOutline } from "react-icons/io5";
 import { BUSINESS, COURTS, SERVICES, SOCIALS } from "@/lib/site-data";
@@ -7,16 +8,20 @@ import {
   getBreadcrumbSchema,
   getFaqSchema,
   getLegalServiceSchema,
-  getLocalBusinessSchema,
   getOrganizationSchema,
   getWebsiteSchema,
 } from "@/lib/schema";
 import PracticeMarquee from "@/components/PracticeMarquee";
 import HeroStats from "@/components/HeroStats";
-import BentoGridLeadership from "@/components/bento-grid-leadership";
-import FaqSection from "@/components/FaqSection";
-import ClientsReviewSection from "@/components/ClientsReviewSection";
 import Heromain from "@/components/Heromain";
+
+const BentoGridLeadership = dynamic(
+  () => import("@/components/bento-grid-leadership")
+);
+const FaqSection = dynamic(() => import("@/components/FaqSection"));
+const ClientsReviewSection = dynamic(
+  () => import("@/components/ClientsReviewSection")
+);
 
 export default function HomePage() {
   const title = "Rajesh Kumar Reddy Advocate Office | Advocate in Kadapa";
@@ -51,51 +56,13 @@ export default function HomePage() {
 
   const schema = [
     getOrganizationSchema(),
-    getLocalBusinessSchema(),
     getLegalServiceSchema(),
     getWebsiteSchema(),
     getFaqSchema(homepageFaqs),
     getBreadcrumbSchema([{ name: "Home", href: "/" }]),
   ];
 
-  const courtImageOverrides = {
-    "Kadapa District Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
-    "Kadapa (District Headquarters) Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080390.jpg",
-    "Railway Kodur Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080599.jpg",
-    "Jammalamadugu Junior Civil Judge Court":
-      "https://files.yappe.in/place/full/jammalamadugu-civil-court-8974915.webp",
-    "Mydukur Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080550.jpg",
-    "Sidhout Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080568.jpg",
-    "Nandalur Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2023/08/2023080512.jpg",
-    "Rayachoty Court (Annamayya District HQ)":
-      "https://media.andhrajyothy.com/media/2023/20231205/9rct27_jpeg_c3a3defcbb.gif",
-
-    "Lakkireddipalli Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091384.jpg",
-
-   "Pulivendula Junior Civil Judge Court":
-      "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091380.jpg",
-"Kamalapuram Junior Civil Judge Court":
-  "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kamalapuram_Railway_Station_Kadapa.jpg",
-"Proddatur Court":
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Prdt_railway_station_sign_board.jpg/1920px-Prdt_railway_station_sign_board.jpg",
-
-"Rajampet Court":
-  "https://imagesvs.oneindia.com/webp/te/img/2024/04/rajampet-1713871607.jpg",
-
-"Badvel Court":
-  "https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091380.jpg",
-"High Court of Andhra Pradesh":
-  "https://www.livelaw.in/h-upload/2020/12/10/500x300_385718-andhra-pradesh-high-court.jpg",
-
-  "Family Court":"https://cdnbbsr.s3waas.gov.in/s3ec03333cb763facc6ce398ff83845f22/uploads/2025/09/2025091389.jpg",
-};
+  const courtImageOverrides = {};
 
   return (
     <>
@@ -313,7 +280,7 @@ export default function HomePage() {
                     height={720}
                     className="h-full w-full object-cover"
                     sizes="(max-width: 768px) 90vw, 420px"
-                    unoptimized
+                    quality={65}
                   />
                 </div>
                 <h3>{court}</h3>
