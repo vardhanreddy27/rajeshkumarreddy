@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://www.rajeshkumarreddyadvocatekadapa.com',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   sitemapSize: 7000,
 
   changefreq: 'daily',

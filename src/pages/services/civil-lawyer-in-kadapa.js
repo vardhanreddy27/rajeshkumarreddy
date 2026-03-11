@@ -95,7 +95,7 @@ export default function CivilLawyerKadapaPage() {
           <div className="hero-card">
             <Image
               src="/images/office-kadapa.svg"
-              alt="Advocate office"
+              alt="Civil lawyer consultation support in Kadapa"
               width={1200}
               height={720}
               sizes="(max-width: 860px) 100vw, 520px"

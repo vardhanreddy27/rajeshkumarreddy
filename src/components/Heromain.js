@@ -11,9 +11,9 @@ export default function Heromain() {
             Rajesh Kumar Reddy Advocate Office
           </span>
 
-          <h1 className="hero-title text-3xl md:text-4xl">
+          <h2 className="hero-title text-3xl md:text-4xl">
             Advocate in Kadapa with Courtroom-Ready Guidance
-          </h1>
+          </h2>
 
           <p className="hero-subtitle max-w-xl">
             With over <strong>36+ years of courtroom experience</strong>, Rajesh
@@ -79,7 +79,8 @@ export default function Heromain() {
           <div className="pointer-events-none absolute top-4 -left-32 hidden md:block opacity-90">
             <Image
               src="/images/kulla.jpeg"
-              alt="Kulla visual"
+              alt=""
+              aria-hidden
               width={520}
               height={640}
               className="h-[440px] md:h-[520px] w-80 md:w-[360px] object-contain"
@@ -89,7 +90,8 @@ export default function Heromain() {
           <div className="pointer-events-none absolute top-4 -right-32 hidden md:block opacity-90">
             <Image
               src="/images/kailash.jpeg"
-              alt="Kailash visual"
+              alt=""
+              aria-hidden
               width={520}
               height={640}
               className="h-[440px] md:h-[520px] w-80 md:w-[360px] object-contain"

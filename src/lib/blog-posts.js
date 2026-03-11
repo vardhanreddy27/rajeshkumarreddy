@@ -1127,6 +1127,146 @@ export const BLOG_POSTS = [
       "Court order copies",
     ],
   }),
+  createPost({
+    slug: "kadapa-motor-accident-claim-checklist",
+    title: "Motor Accident Claim in Kadapa: Practical MACT Checklist",
+    description:
+      "Kadapa MACT claim guide with immediate steps, compensation records, and filing essentials after road accidents.",
+    excerpt:
+      "A practical Kadapa checklist to prepare motor accident compensation claims with the right records.",
+    keywords:
+      "motor accident claim Kadapa, MACT Kadapa, compensation lawyer Kadapa, road accident case Andhra Pradesh",
+    date: "2024-12-28",
+    intro: [
+      "After a road accident, families in Kadapa often lose time because key records are not collected early. A proper checklist can make a major difference in compensation claims.",
+      "MACT filings depend on medical records, police papers, and income details. Early preparation keeps the claim process smoother.",
+    ],
+    keyPoints: [
+      "Collect FIR and charge sheet details quickly",
+      "Preserve medical bills and treatment records",
+      "Maintain salary or income proof",
+      "Record disability and follow-up treatment",
+      "File within limitation with complete documents",
+    ],
+    steps: [
+      "Collect accident records from police and hospital",
+      "Prepare claimant identity and income documents",
+      "Estimate compensation heads with supporting proof",
+      "File MACT petition with annexures",
+      "Track hearings and evidence stage carefully",
+    ],
+    documents: [
+      "FIR, charge sheet, and accident sketch",
+      "Medical records, discharge summary, and bills",
+      "Income proof and employer certificate",
+      "Insurance policy and vehicle papers",
+    ],
+  }),
+  createPost({
+    slug: "kadapa-cyber-fraud-legal-steps",
+    title: "Cyber Fraud in Kadapa: Legal Steps After UPI or Bank Scam",
+    description:
+      "Kadapa guide for cyber fraud victims with complaint steps, banking records, and criminal case follow-up.",
+    excerpt:
+      "What to do immediately after online fraud in Kadapa and which legal records matter most.",
+    keywords:
+      "cyber fraud Kadapa, UPI scam complaint, online fraud legal help Andhra Pradesh, criminal lawyer Kadapa",
+    date: "2024-12-27",
+    intro: [
+      "UPI and online banking fraud cases are rising, and delay in reporting often weakens recovery chances.",
+      "In Kadapa, quick complaint filing and proper bank evidence are critical for both police action and legal follow-up.",
+    ],
+    keyPoints: [
+      "Report fraud immediately on cyber helpline and local police",
+      "Capture transaction IDs and account details",
+      "Preserve screenshots, SMS alerts, and email trails",
+      "Coordinate with bank grievance channels",
+      "Track FIR and investigation progress",
+    ],
+    steps: [
+      "Freeze or report suspicious transactions quickly",
+      "File complaint with all transaction proofs",
+      "Submit written representation to bank",
+      "Follow FIR registration and case number",
+      "Prepare additional documents for investigation",
+    ],
+    documents: [
+      "Transaction screenshots and UTR numbers",
+      "Bank statement and complaint acknowledgement",
+      "Call logs, SMS, and email records",
+      "Identity proof and contact details",
+    ],
+  }),
+  createPost({
+    slug: "kadapa-will-vs-family-settlement",
+    title: "Will vs Family Settlement in Kadapa: Which Is Better for Property Planning?",
+    description:
+      "Kadapa property planning guide comparing wills and family settlements to reduce future disputes.",
+    excerpt:
+      "Understand the practical difference between writing a will and doing a family settlement in Kadapa.",
+    keywords:
+      "will registration Kadapa, family settlement deed Kadapa, inheritance planning Andhra Pradesh, property lawyer Kadapa",
+    date: "2024-12-26",
+    intro: [
+      "Many property disputes start because families avoid clear planning. In Kadapa, both wills and family settlements are common tools, but they serve different needs.",
+      "Choosing the right option early can reduce litigation and protect relationships.",
+    ],
+    keyPoints: [
+      "A will operates after death; settlement works immediately",
+      "Clarity of property schedule is essential",
+      "Witness and execution formalities matter",
+      "Registration can reduce future disputes",
+      "Family context decides the best route",
+    ],
+    steps: [
+      "List assets and ownership clearly",
+      "Discuss whether immediate division is needed",
+      "Draft will or settlement with legal clarity",
+      "Complete execution and witness formalities",
+      "Store originals safely and update records",
+    ],
+    documents: [
+      "Title deeds and encumbrance records",
+      "Family tree and identity proofs",
+      "Property schedule with boundaries",
+      "Draft will or settlement deed",
+    ],
+  }),
+  createPost({
+    slug: "kadapa-pre-litigation-mediation-checklist",
+    title: "Pre-Litigation Mediation in Kadapa: Checklist Before Filing a Case",
+    description:
+      "Kadapa pre-litigation mediation guide for civil and commercial disputes with practical preparation steps.",
+    excerpt:
+      "A practical Kadapa checklist to prepare for mediation before filing a civil or business case.",
+    keywords:
+      "pre litigation mediation Kadapa, civil dispute settlement Kadapa, legal notice and mediation Andhra Pradesh",
+    date: "2024-12-25",
+    intro: [
+      "Not every dispute needs immediate litigation. Pre-litigation mediation can save time and preserve business and family relationships.",
+      "In Kadapa, well-prepared mediation often leads to faster settlements when parties come with clear numbers and documents.",
+    ],
+    keyPoints: [
+      "Clarify core issues and non-negotiables",
+      "Prepare supporting documents and calculations",
+      "Draft realistic settlement options",
+      "Record agreed terms precisely",
+      "Plan enforcement terms in writing",
+    ],
+    steps: [
+      "Review legal notice and responses",
+      "Prepare claim and counter-claim summary",
+      "Attend mediation with decision-ready authority",
+      "Draft settlement terms with timelines",
+      "Sign and preserve final settlement records",
+    ],
+    documents: [
+      "Agreements, invoices, and payment records",
+      "Legal notice and reply copies",
+      "Calculation sheets and account summaries",
+      "Identity proof and authorization letters",
+    ],
+  }),
 ];
 
 export const BLOG_POSTS_PER_PAGE = 5;

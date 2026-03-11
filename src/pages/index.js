@@ -5,6 +5,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { BUSINESS, COURTS, SERVICES, SOCIALS } from "@/lib/site-data";
 import {
   getBreadcrumbSchema,
+  getFaqSchema,
   getLegalServiceSchema,
   getLocalBusinessSchema,
   getOrganizationSchema,
@@ -25,11 +26,35 @@ export default function HomePage() {
   const keywords =
     "advocate in Kadapa, criminal lawyer Kadapa, civil lawyer Kadapa, property dispute lawyer Kadapa, cheque bounce lawyer Kadapa, bail lawyer Kadapa, Kadapa District Court";
 
+  const homepageFaqs = [
+    {
+      question: "Who is a senior advocate in Kadapa for civil and criminal matters?",
+      answer:
+        "Rajesh Kumar Reddy is a senior advocate in Kadapa with 36+ years of courtroom practice, handling civil, criminal, property, family, and cheque bounce matters.",
+    },
+    {
+      question: "Where is the advocate office located in Kadapa?",
+      answer:
+        "The office is beside Kadapa District Court, near Nagarjuna Model School, Kadapa - 516001, Andhra Pradesh.",
+    },
+    {
+      question: "Do you handle bail and criminal defense in Kadapa District Court?",
+      answer:
+        "Yes. The office handles bail applications, anticipatory bail, criminal trial representation, and appeals with focused local court preparation.",
+    },
+    {
+      question: "Do you provide legal help for property and civil disputes in Kadapa?",
+      answer:
+        "Yes. Services include injunctions, partition suits, title disputes, recovery suits, civil appeals, and related property litigation across YSR Kadapa District.",
+    },
+  ];
+
   const schema = [
     getOrganizationSchema(),
     getLocalBusinessSchema(),
     getLegalServiceSchema(),
     getWebsiteSchema(),
+    getFaqSchema(homepageFaqs),
     getBreadcrumbSchema([{ name: "Home", href: "/" }]),
   ];
 

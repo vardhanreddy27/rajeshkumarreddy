@@ -1,5 +1,6 @@
 import Seo from "@/components/Seo";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaWhatsapp,
   FaPhone,
@@ -151,8 +152,38 @@ export default function ContactPage() {
               >
                 <FaGoogle /> Google Business Profile
               </a>
+            </div>
 
-        
+            <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4">
+              <h3 className="text-sm font-semibold uppercase text-slate-600">
+                Helpful Legal Pages
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-3 text-sm font-semibold text-slate-700">
+                <Link className="underline hover:text-slate-900" href="/services">
+                  Legal Services
+                </Link>
+                <Link
+                  className="underline hover:text-slate-900"
+                  href="/services/criminal-lawyer-in-kadapa"
+                >
+                  Criminal Lawyer
+                </Link>
+                <Link
+                  className="underline hover:text-slate-900"
+                  href="/services/civil-lawyer-in-kadapa"
+                >
+                  Civil Lawyer
+                </Link>
+                <Link
+                  className="underline hover:text-slate-900"
+                  href="/services/property-dispute-lawyer-kadapa"
+                >
+                  Property Disputes
+                </Link>
+                <Link className="underline hover:text-slate-900" href="/blog">
+                  Legal Blog
+                </Link>
+              </div>
             </div>
 
             {/* SOCIAL PRESENCE – COLORFUL BG */}

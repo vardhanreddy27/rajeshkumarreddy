@@ -6,21 +6,45 @@ import { BLOG_POSTS, getBlogPost } from "@/lib/blog-posts";
 
 export default function BlogPostPage({ post }) {
   const path = `/blog/${post.slug}`;
+  const articleUrl = `${SITE_URL}${path}`;
+  const articleImage = `${SITE_URL}/images/rajeshkumarreddyofficefront.jpeg`;
+  const articleBody = [
+    ...(post.intro || []),
+    ...(post.keyPoints || []),
+    ...(post.steps || []),
+    ...(post.documents || []),
+    ...(post.localNotes || []),
+  ].join(" ");
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
+    "@id": `${articleUrl}#article`,
+    url: articleUrl,
     headline: post.title,
+    name: post.title,
     description: post.description,
+    image: [articleImage],
     author: {
       "@type": "Person",
       name: BUSINESS.advocateName,
+      jobTitle: "Advocate",
     },
     publisher: {
       "@type": "Organization",
       name: BUSINESS.name,
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/favicon.svg`,
+      },
     },
-    mainEntityOfPage: `${SITE_URL}${path}`,
+    mainEntityOfPage: articleUrl,
+    articleSection: "Legal Guidance",
+    inLanguage: "en-IN",
+    keywords: post.keywords,
+    articleBody,
+    wordCount: articleBody.split(/\s+/).filter(Boolean).length,
     datePublished: post.date,
     dateModified: post.date,
   };
@@ -43,6 +67,11 @@ export default function BlogPostPage({ post }) {
         path={path}
         schema={schema}
         keywords={post.keywords}
+        image={articleImage}
+        imageAlt={post.title}
+        type="article"
+        publishedTime={post.date}
+        modifiedTime={post.date}
       />
 
       <section className="hero">

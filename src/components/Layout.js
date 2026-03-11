@@ -59,6 +59,12 @@ export default function Layout({ children }) {
   return (
     <>
       <div className="min-h-screen flex flex-col bg-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[1000] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900"
+        >
+          Skip to main content
+        </a>
         {/* HEADER */}
         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
           {/* ✅ DESKTOP CONTAINER: SAME AS YOUR CODE */}
@@ -224,15 +230,15 @@ export default function Layout({ children }) {
         )}
 
         {/* MAIN */}
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
 
         {/* FOOTER */}
         <footer className="bg-slate-900 text-slate-200 ">
           <div className="container py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
-              <h1 className="font-bold mb-2">
+              <h2 className="font-bold mb-2 text-base">
                 Rajesh Kumar Reddy – Senior Advocate
-              </h1>
+              </h2>
               <p>{BUSINESS.address}</p>
               <p className="mt-1">
                 Phone:{" "}

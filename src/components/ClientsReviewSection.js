@@ -5,28 +5,40 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const REVIEWS = [
   {
-    name: "Ramesh Kumar",
-    role: "Civil Litigation Client",
+    name: "P. Ramesh",
+    role: "Business Owner, Proddatur",
     text:
-      "Advocate Rajesh Kumar Reddy handled my civil litigation matter in Kadapa District Court with remarkable clarity and confidence.",
+      "I was confused about a money recovery matter. Sir explained the timeline in simple words and filed everything properly. I felt confident from the first hearing.",
   },
   {
-    name: "Lakshmi Devi",
-    role: "Family Court Client",
+    name: "S. Lakshmi",
+    role: "Teacher, Kadapa",
     text:
-      "Family court proceedings were handled with sensitivity and professionalism. Every stage was explained clearly.",
+      "My family case was stressful, but the office handled it patiently. I always knew what documents to carry and what to expect on each date.",
   },
   {
-    name: "Suresh Reddy",
-    role: "Property Dispute Client",
+    name: "M. Suresh Reddy",
+    role: "Farmer, Badvel",
     text:
-      "For a long-standing property dispute, his structured approach helped us reach a resolution efficiently.",
+      "Our land boundary dispute was pending for years. After proper survey records and court planning, the case moved in the right direction.",
   },
   {
-    name: "Anil Kumar",
-    role: "Cheque Bounce Case Client",
+    name: "R. Anitha",
+    role: "Small Business Owner, Rajampet",
     text:
-      "Cheque bounce matter was handled with strong documentation and clear procedural guidance.",
+      "In my cheque bounce case, notice drafting and filing were done on time. The process was clear, and communication was very professional.",
+  },
+  {
+    name: "K. Narayana",
+    role: "Retired Employee, Pulivendula",
+    text:
+      "For an appeal matter, we needed clear advice quickly. We got practical guidance, realistic expectations, and strong representation in court.",
+  },
+  {
+    name: "F. Khaja",
+    role: "Contractor, Kadapa",
+    text:
+      "What I liked most was transparency. Fees, steps, and risks were explained upfront, and every hearing update came on time.",
   },
 ];
 

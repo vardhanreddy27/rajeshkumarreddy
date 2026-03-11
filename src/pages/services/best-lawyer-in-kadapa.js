@@ -96,7 +96,7 @@ export default function BestLawyerKadapaPage() {
           <div className="hero-card">
             <Image
               src="/images/office-kadapa.svg"
-              alt="Advocate office"
+              alt="Senior advocate office near Kadapa District Court"
               width={1200}
               height={720}
               sizes="(max-width: 860px) 100vw, 520px"

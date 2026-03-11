@@ -1,0 +1,47 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build application
+        run: npm run build
+
+      - name: Run Lighthouse CI
+        run: npm run lhci
+
+      - name: Upload Lighthouse artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: .lighthouseci
+          if-no-files-found: ignore
+
+      - name: Workflow summary
+        if: always()
+        run: |
+          echo "## Lighthouse CI" >> "$GITHUB_STEP_SUMMARY"
+          echo "Status: ${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Node version: 22" >> "$GITHUB_STEP_SUMMARY"
+          echo "URLs audited: /, /about, /services, /contact, /blog" >> "$GITHUB_STEP_SUMMARY"
