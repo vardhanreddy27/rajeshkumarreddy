@@ -1267,6 +1267,140 @@ export const BLOG_POSTS = [
       "Identity proof and authorization letters",
     ],
   }),
+  createPost({
+    slug: "kadapa-new-criminal-laws-bns-bnss-bsa-2025",
+    title: "New Criminal Laws in India 2025 (BNS, BNSS, BSA): What Kadapa Residents Should Know",
+    description:
+      "Kadapa guide to India's new criminal laws — Bharatiya Nyaya Sanhita (BNS), Bharatiya Nagarik Suraksha Sanhita (BNSS), and Bharatiya Sakshya Adhiniyam (BSA) replacing IPC, CrPC, and Indian Evidence Act.",
+    excerpt:
+      "A practical Kadapa guide to understanding BNS, BNSS, and BSA — the new criminal laws that replace IPC, CrPC, and the Indian Evidence Act from July 2024.",
+    keywords:
+      "new criminal law India 2025, BNS Kadapa, BNSS Kadapa, BSA Kadapa, IPC replaced, CrPC replaced, criminal lawyer Kadapa, Kadapa District Court new law",
+    date: "2025-05-17",
+    intro: [
+      "India's criminal justice framework has undergone a historic transformation. The Indian Penal Code (IPC, 1860), Code of Criminal Procedure (CrPC, 1973), and Indian Evidence Act (1872) have been replaced by three new laws — the Bharatiya Nyaya Sanhita (BNS), Bharatiya Nagarik Suraksha Sanhita (BNSS), and Bharatiya Sakshya Adhiniyam (BSA), effective from 1 July 2024.",
+      "For residents across Kadapa and YSR Kadapa District, understanding these changes is essential. Whether you are facing a criminal case, filing a complaint, or responding to a notice, the new provisions affect timelines, procedures, and rights.",
+      "Rajesh Kumar Reddy Advocate Office in Kadapa has adapted its courtroom practice to align with BNS, BNSS, and BSA provisions. This guide explains the key changes and practical steps for Kadapa residents.",
+    ],
+    keyPoints: [
+      "BNS replaces IPC — new section numbers for all offences",
+      "BNSS replaces CrPC — updated arrest, bail, and trial procedures",
+      "BSA replaces Evidence Act — electronic evidence rules strengthened",
+      "Zero FIR now mandatory — file at any police station regardless of jurisdiction",
+      "Mandatory videography of crime scenes for serious offences",
+      "Timelines for charge sheet filing reduced to 90 days (extendable to 180)",
+      "Summary trial limits increased for petty offences",
+      "Community service introduced as a sentencing option",
+      "Victim rights strengthened with mandatory updates on case progress",
+      "All existing IPC-era pending cases continue under old sections",
+    ],
+    steps: [
+      "Understand which new law (BNS, BNSS, BSA) applies to your matter",
+      "Check whether your case was filed before or after 1 July 2024",
+      "Review the new section numbers corresponding to old IPC sections",
+      "Confirm updated bail provisions and timelines under BNSS",
+      "Consult a Kadapa advocate experienced in both old and new frameworks",
+    ],
+    documents: [
+      "FIR or complaint copy with applicable section numbers",
+      "Previous court orders referencing old IPC/CrPC sections",
+      "Medical or forensic reports (BSA electronic evidence rules apply)",
+      "Identity and address proof of complainant and accused",
+    ],
+    table: {
+      heading: "Old Law vs New Law — Quick Reference",
+      headers: ["Old Law", "New Law", "Key Change"],
+      rows: [
+        ["Indian Penal Code (IPC)", "Bharatiya Nyaya Sanhita (BNS)", "New section numbers; community service sentencing added"],
+        ["Code of Criminal Procedure (CrPC)", "Bharatiya Nagarik Suraksha Sanhita (BNSS)", "Zero FIR mandatory; videography of crime scenes; faster timelines"],
+        ["Indian Evidence Act", "Bharatiya Sakshya Adhiniyam (BSA)", "Electronic evidence admissibility strengthened; digital records as primary evidence"],
+        ["IPC Section 302 (Murder)", "BNS Section 103", "Same offence, new section numbering"],
+        ["IPC Section 420 (Cheating)", "BNS Section 318", "Expanded definitions for digital fraud"],
+        ["IPC Section 498A (Cruelty)", "BNS Section 85", "Similar protections, updated procedural framework"],
+      ],
+    },
+    localNotes: [
+      "Kadapa District Court is actively applying BNS, BNSS, and BSA provisions in new cases filed after July 2024.",
+      "Clients from Kadapa, Proddatur, Badvel, Pulivendula, and nearby towns should verify which law applies to their case stage.",
+      "The advocate office coordinates with both Kadapa District Court and the High Court of Andhra Pradesh for updated procedural compliance.",
+    ],
+    snapshot: [
+      "36+ years of courtroom practice — adapted to new criminal law framework",
+      "Active practice under both IPC-era and BNS-era cases",
+      "Kadapa District Court focused guidance on updated procedures",
+    ],
+    relatedServices: [
+      { label: "Criminal Lawyer in Kadapa", href: "/services/criminal-lawyer-in-kadapa" },
+      { label: "Bail Lawyer in Kadapa", href: "/bail-lawyer-kadapa" },
+      { label: "Sessions Trials in Kadapa", href: "/sessions-trials-kadapa" },
+      { label: "Criminal Appeals in Kadapa", href: "/criminal-appeals-kadapa" },
+    ],
+  }),
+  createPost({
+    slug: "kadapa-best-advocate-how-to-find-2025",
+    title: "How to Find the Best Advocate in Kadapa in 2025: Complete Guide",
+    description:
+      "Comprehensive Kadapa guide to finding the right advocate with courtroom experience, local knowledge, and specialization for your legal matter.",
+    excerpt:
+      "A 2025 guide to evaluating and selecting the best advocate in Kadapa based on experience, court familiarity, and case type.",
+    keywords:
+      "best advocate in Kadapa 2025, best lawyer in Kadapa, top advocate Kadapa, how to find lawyer Kadapa, Kadapa District Court advocate",
+    date: "2025-05-16",
+    intro: [
+      "Finding the right advocate in Kadapa requires more than a search engine result. It requires understanding your case type, the advocate's courtroom exposure, their familiarity with Kadapa District Court procedures, and whether they can give you honest timelines.",
+      "This guide helps Kadapa residents evaluate an advocate based on practical factors — not just reputation. Whether your matter is civil, criminal, property, family, or financial, the checklist below will help you make an informed decision.",
+      "Rajesh Kumar Reddy Advocate Office has served clients across YSR Kadapa District since 1990 with transparent case assessment and local court expertise.",
+    ],
+    keyPoints: [
+      "Confirm the advocate's Bar Council enrollment and years of practice",
+      "Check experience specifically in Kadapa District Court",
+      "Ask about the advocate's track record in your case type",
+      "Verify proximity to Kadapa District Court for quick filings",
+      "Ask for a clear document checklist before the first consultation",
+      "Confirm how case updates and hearing dates will be communicated",
+      "Evaluate whether the advocate explains legal options in simple terms",
+    ],
+    steps: [
+      "Identify your case type — civil, criminal, property, family, or financial",
+      "Shortlist advocates with verified Kadapa District Court experience",
+      "Schedule a consultation and share your key documents",
+      "Ask about timelines, costs, and realistic outcomes",
+      "Confirm the case strategy and start work",
+    ],
+    documents: [
+      "FIR, notices, or court papers related to your matter",
+      "Property documents, agreements, or financial records",
+      "Identity proof and address proof",
+      "Any previous legal opinions or case history",
+    ],
+    table: {
+      heading: "Advocate Evaluation Checklist for Kadapa",
+      headers: ["Factor", "Why It Matters", "What to Check"],
+      rows: [
+        ["Enrollment & Experience", "Verifies credentials and depth", "Ask for Bar Council number and year"],
+        ["Kadapa Court Familiarity", "Local procedure saves time", "Ask how often they appear in Kadapa District Court"],
+        ["Case Type Match", "Specialization improves outcomes", "Ask about similar cases handled recently"],
+        ["Communication Style", "Clear updates reduce stress", "Ask how they share hearing updates"],
+        ["Office Location", "Quick access to court", "Check if office is near Kadapa District Court"],
+      ],
+    },
+    localNotes: [
+      "Chambers beside Kadapa District Court help with same-day filings and urgent hearing coordination.",
+      "Clients from Proddatur, Badvel, Pulivendula, Rajampet, and other YSR Kadapa District towns can arrange consultations by phone before visiting.",
+      "Verified enrollment: AP/104/1990 with the Bar Council of Andhra Pradesh since 1990.",
+    ],
+    snapshot: [
+      "36+ years of continuous courtroom practice since 1990",
+      "Former President, Kadapa District Bar Association",
+      "Office beside Kadapa District Court — immediate court access",
+    ],
+    relatedServices: [
+      { label: "Best Lawyer in Kadapa", href: "/services/best-lawyer-in-kadapa" },
+      { label: "Civil Lawyer in Kadapa", href: "/services/civil-lawyer-in-kadapa" },
+      { label: "Criminal Lawyer in Kadapa", href: "/services/criminal-lawyer-in-kadapa" },
+      { label: "Property Dispute Lawyer", href: "/services/property-dispute-lawyer-kadapa" },
+    ],
+  }),
 ];
 
 export const BLOG_POSTS_PER_PAGE = 5;

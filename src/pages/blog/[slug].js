@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Seo from "@/components/Seo";
 import { BUSINESS, SITE_URL } from "@/lib/site-data";
-import { getBreadcrumbSchema, getLegalServiceSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getHowToSchema, getLegalServiceSchema } from "@/lib/schema";
 import { BLOG_POSTS, getBlogPost } from "@/lib/blog-posts";
 
 export default function BlogPostPage({ post }) {
@@ -58,6 +58,17 @@ export default function BlogPostPage({ post }) {
       { name: post.title, href: path },
     ]),
   ];
+
+  // Add HowTo schema for posts with steps — AEO gold for featured snippets
+  if (post.steps && post.steps.length > 0) {
+    schema.push(
+      getHowToSchema({
+        name: post.title,
+        description: post.description,
+        steps: post.steps,
+      })
+    );
+  }
 
   return (
     <>

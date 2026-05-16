@@ -52,8 +52,9 @@ export default function Seo({
     },
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: [".hero-title", ".section-title", ".prose"],
+      cssSelector: [".hero-title", ".section-title", ".prose", "h1", "h2", ".callout"],
     },
+    dateModified: new Date().toISOString().split("T")[0],
   };
 
   const allSchemaItems = [webpageSchema, ...schemaItems];
@@ -90,6 +91,7 @@ export default function Seo({
         {prevUrl ? <link rel="prev" href={toAbsoluteUrl(prevUrl)} /> : null}
         {nextUrl ? <link rel="next" href={toAbsoluteUrl(nextUrl)} /> : null}
 
+        {/* Open Graph */}
         <meta property="og:site_name" content={BUSINESS.name} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -102,28 +104,63 @@ export default function Seo({
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_IN" />
 
+        {/* Article-specific OG tags */}
         {type === "article" && publishedTime ? (
           <meta property="article:published_time" content={publishedTime} />
         ) : null}
         {type === "article" && modifiedTime ? (
           <meta property="article:modified_time" content={modifiedTime} />
         ) : null}
+        {type === "article" ? (
+          <meta property="article:author" content={BUSINESS.advocateName} />
+        ) : null}
+        {type === "article" ? (
+          <meta property="article:section" content="Legal Guidance" />
+        ) : null}
 
+        {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImage} />
         <meta name="twitter:image:alt" content={imageAlt || title} />
+        <meta name="twitter:site" content="@RajeshPala31233" />
+        <meta name="twitter:creator" content="@RajeshPala31233" />
 
+        {/* Language and Locale */}
         <link rel="alternate" hrefLang="en-IN" href={canonical} />
         <link rel="alternate" hrefLang="x-default" href={canonical} />
+
+        {/* GEO meta tags — critical for local SEO */}
         <meta name="geo.region" content="IN-AP" />
         <meta name="geo.placename" content="Kadapa" />
         <meta name="geo.position" content={`${GEO.latitude};${GEO.longitude}`} />
         <meta name="ICBM" content={`${GEO.latitude}, ${GEO.longitude}`} />
 
+        {/* Dublin Core metadata — AEO/citation signals for AI engines */}
+        <meta name="dc.title" content={title} />
+        <meta name="dc.creator" content={BUSINESS.advocateName} />
+        <meta name="dc.subject" content={mergedKeywords} />
+        <meta name="dc.description" content={description} />
+        <meta name="dc.publisher" content={BUSINESS.name} />
+        <meta name="dc.language" content="en-IN" />
+        <meta name="dc.coverage" content="YSR Kadapa District, Andhra Pradesh, India" />
+
+        {/* Citation meta — used by AI engines for sourcing */}
+        <meta name="citation_title" content={title} />
+        <meta name="citation_author" content={BUSINESS.advocateName} />
+        <meta name="citation_publisher" content={BUSINESS.name} />
+        {type === "article" && publishedTime ? (
+          <meta name="citation_publication_date" content={publishedTime} />
+        ) : null}
+
+        {/* Author and brand */}
         <meta name="author" content={BUSINESS.advocateName} />
         <meta name="theme-color" content="#8b1f1a" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="3 days" />
+        <meta name="distribution" content="global" />
+        <meta name="coverage" content="India" />
       </Head>
 
       {allSchemaItems.map((item, index) => (

@@ -5,12 +5,16 @@ import Seo from "@/components/Seo";
 import { IoCallOutline } from "react-icons/io5";
 import { BUSINESS, COURTS, SERVICES, SOCIALS } from "@/lib/site-data";
 import {
+  getAttorneySchema,
   getBreadcrumbSchema,
   getFaqSchema,
   getLegalServiceSchema,
   getOrganizationSchema,
+  getPersonSchema,
+  getProfessionalServiceSchema,
   getWebsiteSchema,
 } from "@/lib/schema";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 import PracticeMarquee from "@/components/PracticeMarquee";
 import HeroStats from "@/components/HeroStats";
 import Heromain from "@/components/Heromain";
@@ -58,9 +62,17 @@ export default function HomePage() {
     getOrganizationSchema(),
     getLegalServiceSchema(),
     getWebsiteSchema(),
+    getAttorneySchema(),
+    getPersonSchema(),
+    getProfessionalServiceSchema(),
     getFaqSchema(homepageFaqs),
     getBreadcrumbSchema([{ name: "Home", href: "/" }]),
   ];
+
+  // Latest 3 blog posts for internal linking
+  const latestPosts = [...BLOG_POSTS]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
 
   const courtImageOverrides = {
     "Kadapa District Court":
@@ -407,6 +419,40 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* LATEST FROM BLOG — Internal linking signal */}
+      <section className="section alt">
+        <div className="container">
+          <h2 className="section-title">Latest Legal Guides for Kadapa</h2>
+          <p className="prose max-w-3xl">
+            Read practical legal guides written by Advocate Rajesh Kumar Reddy,
+            covering court process, documents, and legal steps relevant to
+            Kadapa District Court and YSR Kadapa District.
+          </p>
+          <div className="cards three mt-6">
+            {latestPosts.map((post) => (
+              <div key={post.slug} className="card">
+                <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  {post.date}
+                </span>
+                <h3 className="mt-2">{post.title}</h3>
+                <p className="prose mt-2 line-clamp-3">{post.excerpt}</p>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="cta-secondary mt-4 inline-block"
+                >
+                  Read Guide
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/blog" className="cta-primary">
+              View All Legal Guides
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <FaqSection />
 <ClientsReviewSection />
     </>
